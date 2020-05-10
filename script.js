@@ -7,6 +7,8 @@ $(document).ready(function () {
 	document.getElementById("new_team_title").style = "display: none"
 	document.getElementById("league_policy").style = "display: none"
 	document.getElementById("league_policy_title").style = "display: none"
+	document.getElementById("manage_game").style = "display: none"
+	document.getElementById("manage_game_title").style = "display: none"
 })
 
 function welcome() {
@@ -18,6 +20,8 @@ function welcome() {
 	document.getElementById("new_team_title").style = "display: none"
 	document.getElementById("league_policy").style = "display: none"
 	document.getElementById("league_policy_title").style = "display: none"
+	document.getElementById("manage_game").style = "display: none"
+	document.getElementById("manage_game_title").style = "display: none"
 }
 function checkValidation() {
 	//TODO
@@ -34,6 +38,12 @@ function showActions() {
 	document.getElementById("new_team_title").style = "display: none"
 	document.getElementById("league_policy").style = "display: none"
 	document.getElementById("league_policy_title").style = "display: none"
+	document.getElementById("manage_game").style = "display: none"
+	document.getElementById("manage_game_title").style = "display: none"
+}
+
+function backToMenu() {
+	showActions();
 }
 
 function createNewTeam() {
@@ -45,6 +55,8 @@ function createNewTeam() {
 	document.getElementById("new_team_title").style = "display: inline-block"
 	document.getElementById("league_policy").style = "display: none"
 	document.getElementById("league_policy_title").style = "display: none"
+	document.getElementById("manage_game").style = "display: none"
+	document.getElementById("manage_game_title").style = "display: none"
 }
 
 function teamCreated() {
@@ -62,6 +74,8 @@ function chooseLeaguePolicy() {
 	document.getElementById("new_team_title").style = "display: none"
 	document.getElementById("league_policy").style = "display: inline-block"
 	document.getElementById("league_policy_title").style = "display: inline-block"
+	document.getElementById("manage_game").style = "display: none"
+	document.getElementById("manage_game_title").style = "display: none"
 }
 
 function updatePolicy() {
