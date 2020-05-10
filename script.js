@@ -71,7 +71,16 @@ function updatePolicy() {
 }
 
 function manageGame() {
-	
+	document.getElementById("login").style = "display: none"
+	document.getElementById("welcome").style = "display: none"
+	document.getElementById("actions_title").style = "display: none"
+	document.getElementById("actions").style = "display: none"
+	document.getElementById("new_team").style = "display: none"
+	document.getElementById("new_team_title").style = "display: none"
+	document.getElementById("league_policy").style = "display: none"
+	document.getElementById("league_policy_title").style = "display: none"
+	document.getElementById("manage_game").style = "display: inline-block"
+	document.getElementById("manage_game_title").style = "display: inline-block"
 }
 
 function logout() {
