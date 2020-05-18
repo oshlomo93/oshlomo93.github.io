@@ -12,9 +12,7 @@
 
 	
 
-	<div id="main">
-		<img src="https://img.wallpapersafari.com/desktop/1920/1080/59/61/wScxR0.jpg">
-		
+	<div id="main">		
 		<div id="welcome">
 			<h1> Welcome To The Football Association Website! <h1>
 		</div>
@@ -44,7 +42,8 @@
 				<input id="login_btn" type="submit" value="Log In" onclick="checkValidation()">
 			</section>
 		</div>
-		
+	</div>
+	
 		<div id="actions_title" style="visibility: hidden;">
 				<h1> What Would You Like To Do Next? </h1>
 		</div>
@@ -72,6 +71,10 @@
 					</td>
 				</tr>
 			</table>
+		</div>
+	
+		<div id="new_team_background" style="visibility: hidden;">
+			
 		</div>
 		
 		<div id="new_team_title" style="visibility: hidden;">
@@ -120,6 +123,10 @@
 				<br>
 				<input id="back_to_menu_btn" type="submit" value="Back To Main Menu" onclick="backToMenu()">
 		</div>
+	
+		<div id="league_policy_background" style="visibility: hidden;">
+			
+		</div>
 		
 		<div id="league_policy_title" style="visibility: hidden;">
 				<h1> Choose Your League Policy: </h1>
@@ -130,7 +137,7 @@
 				<table>
 					<tr>
 						<td>
-							<label><b>League:</b></label>
+							<label><b>League Name:</b></label>
 						</td>
 						<td>
 							<input id="league" type="text" required>
@@ -141,23 +148,35 @@
 							<label><b>Ranking Policy:</b></label>
 						</td>
 						<td>
-							<input id="ranking_policy" type="text" required>
-						</td>
+							<select>
+								<option value="points"> Points </option>
+								<option value="points_goals"> Points and Goals </option>
+								<option value="points_goals_cards"> Points, Goals and Cards </option>
+							</select>
+						</td>						
 					</tr>
 					<tr>
 						<td>
 							<label><b>Game Setting Policy: </b></label>
 						</td>
 						<td>
-							<input id="game_setting_policy" type="text" required>
+							<select>
+								<option value="one_match"> One Match For Each Pair </option>
+								<option value="two_match"> Two Match For Each Pair </option>
+							</select>
 						</td>
 					</tr>
 				</table>
+				<br>
 				<br>
 				<input id="league_policy_btn" type="submit" value="Update League Policy" onclick="updatePolicy()">
 				<br>
 				<br>
 				<input id="back_to_menu_btn" type="submit" value="Back To Main Menu" onclick="backToMenu()">
+		</div>
+		
+		<div id="manage_game_background" style="visibility: hidden;">
+			
 		</div>
 		
 		<div id="manage_game_title" style="visibility: hidden;">
@@ -172,22 +191,91 @@
 					</td>
 				</tr>
 				<tr>
-					<td button class="action" onclick="editGameEvent()">
+					<td button class="action" onclick="writeGameReport()">
 						<h2>Write Game Report</h2>
-					</td>
-				</tr>
-				<tr>
-					<td button class="action" onclick="sendNotification()">
-						<h2>Send Notifications</h2>
 					</td>
 				</tr>
 			</table>
 			<br>
 			<input id="back_to_menu_btn" type="submit" value="Back To Main Menu" onclick="backToMenu()">
 		</div>
-	</div>
-	
+		
+		<div id="new_game_event_title" style="visibility: hidden;">
+				<h1> Create Your New Game Event: </h1>
+		</div>
+		
+		<div id="new_game_event" style="visibility: hidden;">
+				<table>
+					<tr>
+						<td>
+							<label><b>Game:</b></label>
+						</td>
+						<td>
+							<input id="game" type="text" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label><b>Game Minute:</b></label>
+						</td>
+						<td>
+							<input id="game_minute" type="text" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label><b>Event Type: </b></label>
+						</td>
+						<td>
+							<input id="event_type" type="text" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label><b>Player:</b></label>
+						</td>
+						<td>
+							<input id="player" type="text" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label><b>Description:</b></label>
+						</td>
+						<td>
+							<textarea id="description" type="text" placeholder="Write here your event description.." required></textarea>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<input id="new_game_event_btn" type="submit" value="Create Game Event" onclick="eventCreated()">
+				<br>
+				<br>
+				<input id="back_to_menu_btn" type="submit" value="Back To Main Menu" onclick="backToMenu()">
+		</div>
+		
+		<div id="write_game_report_title" style="visibility: hidden;">
+				<h1> Write Your Report: </h1>
+		</div>
 
+		<div id="write_game_report" style="visibility: hidden;">
+			<table>
+				<tr>
+					<label><b>Report:</b></label>
+				</tr>
+				<br>
+				<br>
+				<tr>
+					<textarea id="report" placeholder="Write here your report.." required></textarea>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<input id="write_game_report_btn" type="submit" value="Write Game Report" onclick="gameReported()">
+			<br>
+			<br>
+			<input id="back_to_menu_btn" type="submit" value="Back To Main Menu" onclick="backToMenu()">
+		</div>
 </body>
 
 </html>
